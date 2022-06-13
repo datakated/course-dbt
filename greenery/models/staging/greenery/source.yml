@@ -3,6 +3,8 @@ version: 2
 sources:
 
   - name: greenery_src
+    schema: public
+    database: dbt 
 
     tables:
       - name: events 
