@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+
+  - name: greenery_src
+
+    tables:
+      - name: events 
+        description: >
+          contains info on dataset events
+      - name: users 
+        description: >
+          contains info on users
+      - name: addresses 
+        description: >
+          contains info on addresses
+      - name: orders 
+        description: >
+          contains info on orders placed
+      - name: order_items 
+        description: >
+          contains info on order items
+      - name: products 
+        description: >
+          contains info on products
+      - name: promos 
+        description: >
+          contains info on company promos
+           

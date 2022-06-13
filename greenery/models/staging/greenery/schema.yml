@@ -1,0 +1,69 @@
+
+
+
+version: 2
+
+models:
+  - name: addresses_stg
+    description: "Shipping addresses for all customers and orders"
+    columns:
+      - name: address_id
+        description: "PK for addresses"
+        tests:
+          - unique
+          - not_null
+
+  - name: events_stg
+    description: "All events recorded for greenery site"
+    columns:
+      - name: event_id
+        description: "PK for events"
+        tests:
+          - unique
+          - not_null
+
+  - name: order_items_stg
+    description: "All line items associated with orders from the greenery site"
+    columns:
+      - name: order_id
+        description: "PK for order lines"
+        tests:
+          - unique
+          - not_null
+    # Not sure if there's a best practice for tables where the PK has to be two columns combined. Wasn't sure what to do since an order could have more than one line and the schema doesn't show a unique line item id.  
+
+  - name: orders_stg
+    description: "All orders from the greenery site"
+    columns:
+      - name: order_id
+        description: "PK for orders"
+        tests:
+          - unique
+          - not_null
+
+  - name: products_stg
+    description: "All products including inventory quantity"
+    columns:
+      - name: product_id
+        description: "PK for products"
+        tests:
+          - unique
+          - not_null
+
+  - name: promos_stg
+    description: "All promos offered by Greenery, including those that are no longer active."
+    columns:
+      - name: promo_id
+        description: "PK for promos"
+        tests:
+          - unique
+          - not_null
+
+  - name: users_stg
+    description: "All users of the greenery site, including phone number"
+    columns:
+      - name: id
+        description: "PK for users"
+        tests:
+          - unique
+          - not_null
