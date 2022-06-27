@@ -111,6 +111,7 @@ models:
         tests:
           - unique
           - not_null
+          - dbt_expectations.expect_column_to_exist
 
   - name: dim_promos
     description: "DIM: All promos offered by Greenery, including those that are no longer active."
@@ -129,3 +130,38 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: fact_events
+    description: "All events recorded for greenery site"
+    columns:
+      - name: event_id
+        description: "PK for events"
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_session_activity
+    description: "FACT: Aggregated events per session"
+    columns:
+      - name: session_id
+        description: "PK for sessions"
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_conversion_rate
+    description: "FACT: overall company conversion rate"
+
+  - name: fact_product_conversion_rate
+    description: "FACT: conversion rate per product based on events"
+    columns:
+      - name: product_id
+        description: "PK for sessions"
+        tests:
+          - unique
+          - not_null
+
+  - name: int_user_events
+    description: "INT: number of events by type and user"
+
+
