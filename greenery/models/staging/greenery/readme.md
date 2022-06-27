@@ -7,3 +7,11 @@ Two: 28
 Three+: 71
 
 -On average, how many unique sessions do we have per hour? 148.04
+
+
+
+
+--week 3--
+
+conversion rate: 62%
+product conversion rate is in fact_product_conversion_rate
